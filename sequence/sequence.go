@@ -22,4 +22,24 @@ const (
 	BCyan    = "\033[36;1m"
 	BWhite   = "\033[37;1m"
 	Reset    = "\033[0m"
+
+	//Background colors
+	BkgBlack   = "\033[40m"
+	BkgRed     = "\033[41m"
+	BkgGreen   = "\033[42m"
+	BkgYellow  = "\033[43m"
+	BkgBlue    = "\033[44m"
+	BkgMegenta = "\033[45m"
+	BkgCyan    = "\033[46m"
+	BkgWhite   = "\033[47m"
+
+	//Bright background colors
+	BBkgBlack   = "\033[40;1m"
+	BBkgRed     = "\033[41;1m"
+	BBkgGreen   = "\033[42;1m"
+	BBkgYellow  = "\033[43;1m"
+	BBkgBlue    = "\033[44;1m"
+	BBkgMegenta = "\033[45;1m"
+	BBkgCyan    = "\033[46;1m"
+	BBkgWhite   = "\033[47;1m"
 )

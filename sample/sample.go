@@ -20,8 +20,14 @@ func Run(out string) {
 		fmt.Printf("%v", BrightColors())
 	case "256Colors":
 		Colors256()
+	case "BkgColors":
+		fmt.Printf("%v", BkgColors())
+	case "BrightBkgColors":
+		fmt.Printf("%v", BBkgColors())
+	case "BkgColors256":
+		BkgColors256()
 	default:
-		fmt.Println("Please enter one of the following: Colors, BrightColors or 256Colors")
+		fmt.Println("Please enter one of the following: Colors, BrightColors,  256Colors, BkgColors or BkgColors256")
 	}
 
 }
@@ -46,5 +52,25 @@ func Colors256() {
 		fmt.Print("\n")
 	}
 	fmt.Println(sequence.Reset)
+}
 
+func BkgColors() string {
+	return fmt.Sprintf("%v  %v  %v  %v  %v  %v  %v  %v  %v  \n", sequence.BkgBlack, sequence.BkgRed, sequence.BkgGreen, sequence.BkgYellow, sequence.BkgBlue, sequence.BkgMegenta, sequence.BkgCyan, sequence.BkgWhite, sequence.Reset)
+}
+
+func BBkgColors() string {
+	return fmt.Sprintf("%v  %v  %v  %v  %v  %v  %v  %v  %v  \n", sequence.BBkgBlack, sequence.BBkgRed, sequence.BBkgGreen, sequence.BBkgYellow, sequence.BBkgBlue, sequence.BBkgMegenta, sequence.BBkgCyan, sequence.BBkgWhite, sequence.Reset)
+}
+
+func BkgColors256() {
+	for i := 0; i < 16; i++ {
+		for j := 0; j < 16; j++ {
+			code := i*16 + j
+			color := term.BkgColor256(code)
+			fmt.Printf("%v   ", color)
+		}
+		fmt.Printf(" %v \n", sequence.Reset)
+
+	}
+	fmt.Println(sequence.Reset)
 }

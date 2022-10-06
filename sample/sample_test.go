@@ -21,9 +21,24 @@ func ExampleBrightColors() {
 
 }
 
+func ExampleBkgColors() {
+	out := sample.BkgColors()
+	fmt.Printf("%q", out)
+	//Output:
+	//"\x1b[40m  \x1b[41m  \x1b[42m  \x1b[43m  \x1b[44m  \x1b[45m  \x1b[46m  \x1b[47m  \x1b[0m  \n"
+
+}
+
+func ExampleBBkgColors() {
+	out := sample.BBkgColors()
+	fmt.Printf("%q", out)
+	//Output:
+	//"\x1b[40;1m  \x1b[41;1m  \x1b[42;1m  \x1b[43;1m  \x1b[44;1m  \x1b[45;1m  \x1b[46;1m  \x1b[47;1m  \x1b[0m  \n"
+
+}
+
 func ExampleRun_fail() {
 	sample.Run("Nothing")
 	//Output:
-	//Please enter one of the following: Colors, BrightColors or 256Colors
-
+	//Please enter one of the following: Colors, BrightColors,  256Colors, BkgColors or BkgColors256
 }

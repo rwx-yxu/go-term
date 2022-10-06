@@ -51,3 +51,49 @@ func ExampleColors_bright() {
 	//"\x1b[37;1m"
 	//"\x1b[0m"
 }
+
+func ExampleBkgColors() {
+	fmt.Printf("%q\n", sequence.BkgBlack)
+	fmt.Printf("%q\n", sequence.BkgRed)
+	fmt.Printf("%q\n", sequence.BkgGreen)
+	fmt.Printf("%q\n", sequence.BkgYellow)
+	fmt.Printf("%q\n", sequence.BkgBlue)
+	fmt.Printf("%q\n", sequence.BkgMegenta)
+	fmt.Printf("%q\n", sequence.BkgCyan)
+	fmt.Printf("%q\n", sequence.BkgWhite)
+	fmt.Printf("%q\n", sequence.Reset)
+
+	//Output:
+	//"\x1b[40m"
+	//"\x1b[41m"
+	//"\x1b[42m"
+	//"\x1b[43m"
+	//"\x1b[44m"
+	//"\x1b[45m"
+	//"\x1b[46m"
+	//"\x1b[47m"
+	//"\x1b[0m"
+}
+
+func ExampleBkgColors_bright() {
+	fmt.Printf("%q\n", sequence.BBkgBlack)
+	fmt.Printf("%q\n", sequence.BBkgRed)
+	fmt.Printf("%q\n", sequence.BBkgGreen)
+	fmt.Printf("%q\n", sequence.BBkgYellow)
+	fmt.Printf("%q\n", sequence.BBkgBlue)
+	fmt.Printf("%q\n", sequence.BBkgMegenta)
+	fmt.Printf("%q\n", sequence.BBkgCyan)
+	fmt.Printf("%q\n", sequence.BBkgWhite)
+	fmt.Printf("%q\n", sequence.Reset)
+
+	//Output:
+	//"\x1b[40;1m"
+	//"\x1b[41;1m"
+	//"\x1b[42;1m"
+	//"\x1b[43;1m"
+	//"\x1b[44;1m"
+	//"\x1b[45;1m"
+	//"\x1b[46;1m"
+	//"\x1b[47;1m"
+	//"\x1b[0m"
+}
