@@ -26,8 +26,10 @@ func Run(out string) {
 		fmt.Printf("%v", BBkgColors())
 	case "BkgColors256":
 		BkgColors256()
+	case "Decoration":
+		fmt.Printf("%v", Decoration())
 	default:
-		fmt.Println("Please enter one of the following: Colors, BrightColors,  256Colors, BkgColors or BkgColors256")
+		fmt.Println("Please enter one of the following: Colors, BrightColors,  256Colors, BkgColors, BkgColors256 or Decoration")
 	}
 
 }
@@ -73,4 +75,9 @@ func BkgColors256() {
 
 	}
 	fmt.Println(sequence.Reset)
+}
+
+func Decoration() string {
+	return fmt.Sprintf("%v BOLD %v %v Underline %v %v Reversed %v\n", sequence.Bold, sequence.Reset, sequence.ULine, sequence.Reset, sequence.Reverse, sequence.Reset)
+
 }

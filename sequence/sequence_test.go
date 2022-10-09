@@ -97,3 +97,15 @@ func ExampleBkgColors_bright() {
 	//"\x1b[47;1m"
 	//"\x1b[0m"
 }
+
+func ExampleDecorations() {
+	fmt.Printf("%q\n", sequence.ULine)
+	fmt.Printf("%q\n", sequence.Reverse)
+	fmt.Printf("%q\n", sequence.Bold)
+
+	//Output:
+	//"\x1b[4m"
+	//"\x1b[7m"
+	//"\x1b[1m"
+
+}

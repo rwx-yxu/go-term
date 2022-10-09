@@ -42,4 +42,9 @@ const (
 	BBkgMegenta = "\033[45;1m"
 	BBkgCyan    = "\033[46;1m"
 	BBkgWhite   = "\033[47;1m"
+
+	//Text decorations
+	Bold    = "\033[1m"
+	ULine   = "\033[4m"
+	Reverse = "\033[7m"
 )

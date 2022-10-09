@@ -40,5 +40,13 @@ func ExampleBBkgColors() {
 func ExampleRun_fail() {
 	sample.Run("Nothing")
 	//Output:
-	//Please enter one of the following: Colors, BrightColors,  256Colors, BkgColors or BkgColors256
+	//Please enter one of the following: Colors, BrightColors,  256Colors, BkgColors, BkgColors256 or Decoration
+}
+
+func ExampleDecoration() {
+	out := sample.Decoration()
+	fmt.Printf("%q", out)
+	//Output:
+	//"\x1b[1m BOLD \x1b[0m \x1b[4m Underline \x1b[0m \x1b[7m Reversed \x1b[0m\n"
+
 }
