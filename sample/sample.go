@@ -9,8 +9,14 @@ import (
 
 //Run function will ran a sample command based on the argument being
 //passed through.
-//Supported sample outputs are: Basic text colors, bright colors and 256
-//colors
+//Supported sample outputs are:
+//Basic text colors
+//Bright colors
+//256colors
+//Background colors
+//Bright background colors
+//256 background colors
+//Decorations
 func Run(out string) {
 
 	switch out {
@@ -29,21 +35,35 @@ func Run(out string) {
 	case "Decoration":
 		fmt.Printf("%v", Decoration())
 	default:
-		fmt.Println("Please enter one of the following: Colors, BrightColors,  256Colors, BkgColors, BkgColors256 or Decoration")
+		fmt.Println("Please enter one of the following:")
+		fmt.Println(" - Colors")
+		fmt.Println(" - BrightColors")
+		fmt.Println(" - 256Colors")
+		fmt.Println(" - BkgColors")
+		fmt.Println(" - BrightBkgColors")
+		fmt.Println(" - BkgColors256")
+		fmt.Println(" - Decoration")
 	}
 
 }
 
+//Colors returns a formatted colored text for the eight basic terminal
+//colors:black, red, green, yellow, megenta,
+//cyan and white
 func Colors() string {
 	return fmt.Sprintf("%v A %v B %v C %v D %v E %v F %v G %v H %v \n", sequence.Black, sequence.Red, sequence.
 		Green, sequence.Yellow, sequence.Blue, sequence.Megenta, sequence.Cyan, sequence.White, sequence.Reset)
 }
 
+//BrightColors returns a formatted string for the eight basic terminal
+//bright colors: black, red, green, yellow, megenta,
+//cyan and white
 func BrightColors() string {
 	return fmt.Sprintf("%v A %v B %v C %v D %v E %v F %v G %v H %v \n", sequence.BBlack, sequence.BRed, sequence.BGreen, sequence.BYellow, sequence.BBlue, sequence.BMegenta, sequence.BCyan, sequence.BWhite, sequence.Reset)
 
 }
 
+//Color256 outputs the 256 colors in a 15x15 grid.
 func Colors256() {
 	for i := 0; i < 16; i++ {
 		for j := 0; j < 16; j++ {
@@ -56,14 +76,22 @@ func Colors256() {
 	fmt.Println(sequence.Reset)
 }
 
+//BkgColors will return an ansi escape string that displays the basic
+//background colors:black, red, green, yellow, megenta,
+//cyan and white
+
 func BkgColors() string {
 	return fmt.Sprintf("%v  %v  %v  %v  %v  %v  %v  %v  %v  \n", sequence.BkgBlack, sequence.BkgRed, sequence.BkgGreen, sequence.BkgYellow, sequence.BkgBlue, sequence.BkgMegenta, sequence.BkgCyan, sequence.BkgWhite, sequence.Reset)
 }
 
+//BBkgColors will return a formatted ansi escape string that displays
+//the bright basic background colors: black, red, green, yellow, megenta,
+//cyan and white
 func BBkgColors() string {
 	return fmt.Sprintf("%v  %v  %v  %v  %v  %v  %v  %v  %v  \n", sequence.BBkgBlack, sequence.BBkgRed, sequence.BBkgGreen, sequence.BBkgYellow, sequence.BBkgBlue, sequence.BBkgMegenta, sequence.BBkgCyan, sequence.BBkgWhite, sequence.Reset)
 }
 
+//BkgColors256 will output all 256 colors as background.
 func BkgColors256() {
 	for i := 0; i < 16; i++ {
 		for j := 0; j < 16; j++ {
@@ -77,6 +105,8 @@ func BkgColors256() {
 	fmt.Println(sequence.Reset)
 }
 
+//Decoration will return a formatted string for bold, underline and
+//reversed
 func Decoration() string {
 	return fmt.Sprintf("%v BOLD %v %v Underline %v %v Reversed %v\n", sequence.Bold, sequence.Reset, sequence.ULine, sequence.Reset, sequence.Reverse, sequence.Reset)
 

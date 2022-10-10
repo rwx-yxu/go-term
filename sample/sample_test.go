@@ -40,7 +40,14 @@ func ExampleBBkgColors() {
 func ExampleRun_fail() {
 	sample.Run("Nothing")
 	//Output:
-	//Please enter one of the following: Colors, BrightColors,  256Colors, BkgColors, BkgColors256 or Decoration
+	//Please enter one of the following:
+	//  - Colors
+	//  - BrightColors
+	//  - 256Colors
+	//  - BkgColors
+	//  - BrightBkgColors
+	//  - BkgColors256
+	//  - Decoration
 }
 
 func ExampleDecoration() {
