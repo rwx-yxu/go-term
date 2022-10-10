@@ -20,3 +20,31 @@ func ExampleBkgColor256() {
 	//Output:
 	//"\x1b[48;5;50m"
 }
+
+func ExampleMvUp() {
+	out := term.MvUp(2)
+	fmt.Printf("%q\n", out)
+	//Output:
+	//"\x1b[{2}A"
+}
+
+func ExampleMvDown() {
+	out := term.MvDown(2)
+	fmt.Printf("%q\n", out)
+	//Output:
+	//"\x1b[{2}B"
+}
+
+func ExampleMvRight() {
+	out := term.MvRight(2)
+	fmt.Printf("%q\n", out)
+	//Output:
+	//"\x1b[{2}C"
+}
+
+func ExampleMvLeft() {
+	out := term.MvLeft(2)
+	fmt.Printf("%q\n", out)
+	//Output:
+	//"\x1b[{2}D"
+}
