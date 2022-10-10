@@ -3,8 +3,8 @@ package sample
 import (
 	"fmt"
 
-	"github.com/rwx-yxu/go-term"
-	"github.com/rwx-yxu/go-term/sequence"
+	"github.com/rwx-yxu/term"
+	"github.com/rwx-yxu/term/sequence"
 )
 
 //Run function will ran a sample command based on the argument being

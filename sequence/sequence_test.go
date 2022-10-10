@@ -3,7 +3,7 @@ package sequence_test
 import (
 	"fmt"
 
-	"github.com/rwx-yxu/go-term/sequence"
+	"github.com/rwx-yxu/term/sequence"
 )
 
 func ExampleColors_basic() {

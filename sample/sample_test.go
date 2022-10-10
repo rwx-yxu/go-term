@@ -3,7 +3,7 @@ package sample_test
 import (
 	"fmt"
 
-	"github.com/rwx-yxu/go-term/sample"
+	"github.com/rwx-yxu/term/sample"
 )
 
 func ExampleTextColors() {

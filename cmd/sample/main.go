@@ -4,7 +4,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/rwx-yxu/go-term/sample"
+	"github.com/rwx-yxu/term/sample"
 )
 
 func main() {

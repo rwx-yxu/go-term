@@ -3,7 +3,7 @@ package term_test
 import (
 	"fmt"
 
-	"github.com/rwx-yxu/go-term"
+	"github.com/rwx-yxu/term"
 )
 
 func ExampleColor256() {
