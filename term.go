@@ -1,6 +1,11 @@
 package term
 
-import "fmt"
+import (
+	"bufio"
+	"fmt"
+	"io"
+	"strings"
+)
 
 //Color256 will return a formatted ansi escape code for a 256 color
 //sequence
@@ -36,4 +41,26 @@ func MvRight(i int) string {
 //to the left by i steps.
 func MvLeft(i int) string {
 	return fmt.Sprintf("\033[{%v}D", i)
+}
+
+//Prompt prints that optional prompt (> by default) and returns the string
+//entered by the user
+func Prompt(in io.Reader, a string) (string, error) {
+	p := "> "
+	if a != "" {
+		p = a
+	}
+	fmt.Print(p)
+	return ReadLine(in)
+}
+
+//Readline takes any io.Reader and returns a trimmed string (initial and  trailing white space) or an empty
+//string if an error is encountered
+func ReadLine(in io.Reader) (string, error) {
+	//TODO Consider using a scanner
+	//This is technically wrong since it will read until the line
+	//return. There might be a carriage return before that.
+	out, err := bufio.NewReader(in).ReadString('\n')
+	out = strings.TrimSpace(out)
+	return out, err
 }
