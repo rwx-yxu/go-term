@@ -47,4 +47,9 @@ const (
 	Bold    = "\033[1m"
 	ULine   = "\033[4m"
 	Reverse = "\033[7m"
+
+	//Clear codes
+	CLEntire = "\033[2K"
+	CLStart  = "\033[1K"
+	CLEnd    = "\033[0K"
 )

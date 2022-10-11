@@ -27,28 +27,28 @@ func ExampleMvUp() {
 	out := term.MvUp(2)
 	fmt.Printf("%q\n", out)
 	//Output:
-	//"\x1b[{2}A"
+	//"\x1b[2A"
 }
 
 func ExampleMvDown() {
 	out := term.MvDown(2)
 	fmt.Printf("%q\n", out)
 	//Output:
-	//"\x1b[{2}B"
+	//"\x1b[2B"
 }
 
 func ExampleMvRight() {
 	out := term.MvRight(2)
 	fmt.Printf("%q\n", out)
 	//Output:
-	//"\x1b[{2}C"
+	//"\x1b[2C"
 }
 
 func ExampleMvLeft() {
 	out := term.MvLeft(2)
 	fmt.Printf("%q\n", out)
 	//Output:
-	//"\x1b[{2}D"
+	//"\x1b[2D"
 }
 
 func ExampleReadLine() {

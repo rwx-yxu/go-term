@@ -109,3 +109,14 @@ func ExampleDecorations() {
 	//"\x1b[1m"
 
 }
+
+func ExampleClearLine() {
+	fmt.Printf("%q\n", sequence.CLEntire)
+	fmt.Printf("%q\n", sequence.CLStart)
+	fmt.Printf("%q\n", sequence.CLEnd)
+	//Output:
+	//"\x1b[2K"
+	//"\x1b[1K"
+	//"\x1b[0K"
+
+}

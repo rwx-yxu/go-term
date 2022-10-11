@@ -2,6 +2,7 @@ package sample
 
 import (
 	"fmt"
+	"time"
 
 	"github.com/rwx-yxu/term"
 	"github.com/rwx-yxu/term/sequence"
@@ -34,6 +35,8 @@ func Run(out string) {
 		BkgColors256()
 	case "Decoration":
 		fmt.Printf("%v", Decoration())
+	case "Loading":
+		Loading()
 	default:
 		fmt.Println("Please enter one of the following:")
 		fmt.Println(" - Colors")
@@ -43,8 +46,8 @@ func Run(out string) {
 		fmt.Println(" - BrightBkgColors")
 		fmt.Println(" - BkgColors256")
 		fmt.Println(" - Decoration")
+		fmt.Println(" - Loading")
 	}
-
 }
 
 //Colors returns a formatted colored text for the eight basic terminal
@@ -110,4 +113,14 @@ func BkgColors256() {
 func Decoration() string {
 	return fmt.Sprintf("%v BOLD %v %v Underline %v %v Reversed %v\n", sequence.Bold, sequence.Reset, sequence.ULine, sequence.Reset, sequence.Reverse, sequence.Reset)
 
+}
+
+func Loading() {
+	fmt.Println("Loading...")
+	for i := 0; i < 101; i++ {
+		fmt.Print(term.MvLeft(1000))
+		fmt.Printf("%v%% ", i)
+		time.Sleep(time.Millisecond * 100)
+	}
+	fmt.Print("\n")
 }

@@ -48,6 +48,7 @@ func ExampleRun_fail() {
 	//  - BrightBkgColors
 	//  - BkgColors256
 	//  - Decoration
+	//  - Loading
 }
 
 func ExampleDecoration() {

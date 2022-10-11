@@ -22,25 +22,25 @@ func BkgColor256(i int) string {
 //MvUp will return a formatted ansi escape code for moving the cursor up
 //by i lines.
 func MvUp(i int) string {
-	return fmt.Sprintf("\033[{%v}A", i)
+	return fmt.Sprintf("\033[%vA", i)
 }
 
 //MvDown will return a formatted ansi escape code for moving the cursor
 //down by i lines
 func MvDown(i int) string {
-	return fmt.Sprintf("\033[{%v}B", i)
+	return fmt.Sprintf("\033[%vB", i)
 }
 
 //MvRight will return a formatted ansi escape code for moving the cursor
 //right by i steps.
 func MvRight(i int) string {
-	return fmt.Sprintf("\033[{%v}C", i)
+	return fmt.Sprintf("\033[%vC", i)
 }
 
 //MvLeft will return a formatted ani escape code for moving the cursor
 //to the left by i steps.
 func MvLeft(i int) string {
-	return fmt.Sprintf("\033[{%v}D", i)
+	return fmt.Sprintf("\033[%vD", i)
 }
 
 //Prompt prints that optional prompt (> by default) and returns the string
