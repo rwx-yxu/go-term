@@ -18,6 +18,7 @@ import (
 //Bright background colors
 //256 background colors
 //Decorations
+//Loading
 func Run(out string) {
 
 	switch out {
